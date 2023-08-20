@@ -22,11 +22,14 @@ class Dish():
     def update_dish(self, name, id_dish):
         """update_dish – updates the price of a dish by name."""
         self.cur.execute("UPDATE Dish SET name = (?) WHERE id_dish = (?)", (name, id_dish))
+        self.connection.commit()
 
     def delete_dish(self, id_dish):
         """delete_dish – deletes the recipe from the database by ID."""
         sql_delete_query = "DELETE FROM Dish WHERE id_dish = %s" % id_dish
         self.cur.execute(sql_delete_query)
+        self.connection.commit()  # Remember to commit the transaction after executing DELETE.
+
 
     def end(self):
         """close sqlite3 connection. Any pending transaction
