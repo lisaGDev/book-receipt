@@ -30,10 +30,7 @@ class Dish():
         self.cur.execute(sql_delete_query)
         self.connection.commit()  # Remember to commit the transaction after executing DELETE.
 
-
     def end(self):
-        """close sqlite3 connection. Any pending transaction
-        is not committed implicitly; make sure to commit() before
-        closing to avoid losing pending changes."""
+        """close sqlite3 connection."""
         self.connection.commit()
         self.connection.close()
