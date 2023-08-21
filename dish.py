@@ -2,7 +2,7 @@ import sqlite3
 import flask
 
 
-class Dish():
+class Dish:
     def __init__(self, dish_name):
         """Initialize db class variables"""
         self.connection = sqlite3.connect("Cookie.db")
@@ -19,9 +19,9 @@ class Dish():
         self.cur.execute("INSERT INTO Dish (name, quantity, price) VALUES (?, ?, ?)", (name, quantity, price))
         self.connection.commit()  # Remember to commit the transaction after executing INSERT.
 
-    def update_dish(self, name, id_dish):
+    def update_dish(self, price, id_dish):
         """update_dish – updates the price of a dish by name."""
-        self.cur.execute("UPDATE Dish SET name = (?) WHERE id_dish = (?)", (name, id_dish))
+        self.cur.execute("UPDATE Dish SET price = (?) WHERE id_dish = (?)", (price, id_dish))
         self.connection.commit()
 
     def delete_dish(self, id_dish):
