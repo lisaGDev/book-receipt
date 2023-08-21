@@ -63,7 +63,7 @@ print("===================")
 print("End Update Ingredient")
 print("===================")
 
-ingredient_1.delete(1)
+ingredient_1.delete(2)
 a = ingredient_1.get()
 print('=================')
 print("DELETE Ingredient")
