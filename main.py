@@ -1,5 +1,6 @@
 from dish import Dish
 from ingredients import Ingredients
+import django
 
 dish_1 = Dish('Pasta Carbanara')
 ingredient_1 = Ingredients()
@@ -75,20 +76,20 @@ o = ingredient_1.get()
 
 # q = dish_1.get_ingredients_by_dish('goat')
 # print("===================")
-# print("Ingredients By Dish")
+# print("Ingredients By dish")
 # print("===================")
 # print(q)
 # print("====================")
-# print("End Ingredients Dish")
+# print("End Ingredients dish")
 # print("====================")
 
 w = dish_1.price_ingredients_for_dish('goat')
 print("=========================")
-print("Price Ingredients By Dish")
+print("Price Ingredients By dish")
 print("=========================")
 print(w)
 # print("==========================")
-# print("Price End Ingredients Dish")
+# print("Price End Ingredients dish")
 # print("==========================")
 
 e = dish_1.order_price()
