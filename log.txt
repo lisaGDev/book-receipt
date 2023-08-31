@@ -1,0 +1,30 @@
+INFO:dish.views:2 0 0 SCAN dish_dish
+INFO:dish.views:2 0 0 SCAN dish_dish
+INFO:dish.views:2 0 0 SCAN dish_dish
+INFO:dish.views:3 0 0 SCAN dish_dish
+12 0 0 USE TEMP B-TREE FOR ORDER BY
+INFO:django.utils.autoreload:/Users/lisagalva/Desktop/Python_Projects/book-receipt/Cookie/dish/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /testing
+Traceback (most recent call last):
+  File "/Users/lisagalva/Library/Python/3.9/lib/python/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/lisagalva/Library/Python/3.9/lib/python/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/lisagalva/Desktop/Python_Projects/book-receipt/Cookie/dish/views.py", line 37, in testing
+    logger.info(dishdata.explain(verbose=True))
+  File "/Users/lisagalva/Library/Python/3.9/lib/python/site-packages/django/db/models/query.py", line 1281, in explain
+    return self.query.explain(using=self.db, format=format, **options)
+  File "/Users/lisagalva/Library/Python/3.9/lib/python/site-packages/django/db/models/sql/query.py", line 610, in explain
+    return "\n".join(compiler.explain_query())
+  File "/Users/lisagalva/Library/Python/3.9/lib/python/site-packages/django/db/models/sql/compiler.py", line 1611, in explain_query
+    result = list(self.execute_sql())
+  File "/Users/lisagalva/Library/Python/3.9/lib/python/site-packages/django/db/models/sql/compiler.py", line 1549, in execute_sql
+    sql, params = self.as_sql()
+  File "/Users/lisagalva/Library/Python/3.9/lib/python/site-packages/django/db/models/sql/compiler.py", line 886, in as_sql
+    self.connection.ops.explain_query_prefix(
+  File "/Users/lisagalva/Library/Python/3.9/lib/python/site-packages/django/db/backends/base/operations.py", line 771, in explain_query_prefix
+    raise ValueError("Unknown options: %s" % ", ".join(sorted(options.keys())))
+ValueError: Unknown options: verbose
+INFO:django.utils.autoreload:/Users/lisagalva/Desktop/Python_Projects/book-receipt/Cookie/dish/views.py changed, reloading.
+INFO:dish.views:2 0 0 SCAN dish_dish
+INFO:dish.views:2 0 0 SCAN dish_dish

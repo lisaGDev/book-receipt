@@ -4,7 +4,7 @@ from .models import Dish
 
 # Register your models here.
 class DishAdmin(admin.ModelAdmin):
-    list_display = ("name", "quantity", "price",)
+    list_display = ("id", "name", "quantity", "price",)
 
 
 admin.site.register(Dish, DishAdmin)

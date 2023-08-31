@@ -1,6 +1,12 @@
 from django.template import loader
 from django.http import HttpResponse
 from .models import Dish
+import logging
+
+logging.basicConfig(filename='../log.txt', level=logging.DEBUG)
+
+# Get an instance of a logger
+logger = logging.getLogger(__name__)
 
 
 def dish(request):
@@ -9,6 +15,7 @@ def dish(request):
     context = {
         'dishes': dishes,
     }
+    logger.info(dishes.explain())
     return HttpResponse(template.render(context, request))
 
 
@@ -27,6 +34,7 @@ def testing(request):
     context = {
         'dishdata': dishdata,
     }
+    logger.info(dishdata.explain())
     return HttpResponse(template.render(context, request))
 
 
