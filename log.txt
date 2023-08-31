@@ -1,0 +1,7 @@
+INFO:dish.views:2 0 0 SCAN dish_dish
+INFO:dish.views:2 0 0 SCAN dish_dish
+INFO:dish.views:2 0 0 SCAN dish_dish
+INFO:dish.views:3 0 0 SCAN dish_dish
+12 0 0 USE TEMP B-TREE FOR ORDER BY
+INFO:dish.views:2 0 0 SCAN dish_dish
+INFO:dish.views:2 0 0 SCAN dish_dish
