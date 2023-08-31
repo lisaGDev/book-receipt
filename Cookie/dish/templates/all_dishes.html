@@ -1,0 +1,32 @@
+{% extends "master.html" %}
+
+{% block title %}
+    Dishes
+{% endblock %}
+
+{% block content %}
+    <div class="mycard">
+        <h1>List of all dishes</h1>
+        <form method='POST' action="/add_dish">
+            {% csrf_token %}
+          <fieldset>
+            <legend>Button types</legend>
+              <label>
+                  <input type="text" name="name" placeholder="Dish Name">
+              </label>
+              <label for="quantity">
+                  <input type="text" id="quantity" name="quantity" placeholder="Quantity">
+              </label>
+              <label for="price">
+                  <input type="number" id="price" name="price" placeholder="Price">
+              </label>
+            <button type="submit">Submit</button>
+          </fieldset>
+        </form>
+        <ul>
+          {% for x in dishes %}
+              <li><a href="get_dish_by_id/{{ x.id }}">{{ x.name }}</a></li>
+          {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
