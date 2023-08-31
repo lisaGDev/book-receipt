@@ -6,3 +6,5 @@ Use Python to build the application, including the Flask framework for simple we
 
 The web app will enable users to view, add, modify, and delete recipes in the Cookie database.
 Uploading Screen Recording 2023-08-30 at 8.48.50 PM.mov…
+<img width="1422" alt="Screen Shot 2023-08-30 at 8 57 31 PM" src="https://github.com/lisaGDev/book-receipt/assets/136374063/47878080-7305-4fd4-9a40-37d39b68467d">
+<img width="1432" alt="Screen Shot 2023-08-30 at 9 12 12 PM" src="https://github.com/lisaGDev/book-receipt/assets/136374063/21860e9a-6924-4b3f-8601-c97d65d9485e">
